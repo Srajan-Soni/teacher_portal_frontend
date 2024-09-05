@@ -42,7 +42,7 @@ const Dashboard = () => {
   };
 
   const handleDelete = async (studentId) => {
-    // Optimistic update: Remove the student from the local state immediately
+   
     const updatedStudents = students.filter((student) => student._id !== studentId);
     dispatch({ type: 'students/deleteStudent/fulfilled', payload: studentId });
     try {
@@ -50,7 +50,7 @@ const Dashboard = () => {
       message.success("Student deleted successfully");
     } catch (error) {
       message.error("Failed to delete student");
-      // Re-add the student if deletion fails
+ 
       dispatch({ type: 'students/deleteStudent/rejected', payload: studentId });
     }
   };

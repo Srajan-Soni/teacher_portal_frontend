@@ -1,4 +1,4 @@
-// context/AuthContext.js
+
 import React, { createContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,9 +24,7 @@ const AuthProvider = ({ children }) => {
 
   const login = () => {
     setIsLoggedIn(true);
-    // console.log(teacherId,"In auth....");
-    
-    // setTeacherId(teacherId);
+   
   };
 
   const logout = () => {
